@@ -1,0 +1,195 @@
+.logo{
+    color: rgb(61, 6, 96);
+    font-style: italic;
+    font-family: Courier, monospace;
+}
+nav ul{
+    padding: 0;
+    text-align: center;
+
+}
+label{
+    font-weight:bold;
+}
+nav ul li{
+    display: inline;
+    padding-right: 20px;
+    color:rgb(56, 15, 83) ;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    font-weight:500;
+}
+a{
+    color: rgb(56,15,83) ;
+    text-decoration: none;
+}
+a:hover{
+    color: rgba(139, 57, 190, 0.877);
+}
+#log{
+    padding:10px 20px 10px 20px;
+    border-radius: 40px;
+    color: rgb(84, 15, 129) ;
+    margin-bottom: 2vh;
+    font-weight:bold;
+    font-size:10px;
+    border-style: none;
+    background-color: #c1bfbf;
+    margin-left: 195vh;
+    margin-top: -20px;
+    
+  
+    
+}
+#schedule{
+    margin-left: 190vh;
+    padding: 10px;
+    border-radius:40px ;
+    color: white;
+    font-size:10px;
+    border-style: none;
+    font-weight:bold;
+    
+    background-image: linear-gradient(to right, rgb(65, 5, 121) , rgb(151, 35, 167));
+
+
+}
+#container{
+    background-color: rgba(192,192,192,0.2);
+    border-radius: 10px;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    margin: 10vh 3vh 5vh 3vh;
+}
+#head1{
+    text-align: center;
+    padding-bottom: 5vh;
+}
+#c2{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8vh 8vh 4vh 8vh;
+    background-color: white;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin: 5vh;
+
+    
+}
+
+.next1{
+    font-weight:bold;
+   width:20vh;
+   border-radius: 10px;
+   height: 10vh;
+   color: white;
+   background-color: #3a1556;
+   border-style: none;
+   margin: -20px 5vh 3vh 170vh ;
+}
+.prev{
+   font-weight:bold;
+   width:20vh;
+   border-radius: 10px;
+   height: 10vh;
+   color: white;
+   background-color: #3a1556;
+   border-style: none;
+   margin: 10vh 5vh 3vh 0vh ;
+}
+
+/*page2*/
+select{
+    width: 100%;
+    background-color: rgba(192,192,192,0.2);
+    margin-bottom: 5vh;
+    border-radius: 10px;
+    height: 40px;
+    border-color: black;
+    color: #767272;
+
+}
+h6{
+    margin-bottom: 2px ;
+    font-weight:400;
+    margin-top: 2px;
+    color: rgb(123, 123, 123);
+}
+input[type=text] {
+    width: 100%;
+    background-color: rgba(192,192,192,0.2);
+    margin-bottom: 5vh;
+    border-radius: 10px;
+    height: 40px;
+    border-color: black;
+    
+}
+
+
+/* step-indicator*/
+.step-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 50vh;
+    margin-right: 50vh;
+}
+
+.step {
+    width: 10vh;
+    height: 10vh;
+    border-radius: 20%;
+    background-color: #ccc;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    position: relative;
+}
+
+.step.completed {
+    background-color: #541f95; /* Color for completed steps */
+    color: #ffffff;
+}
+
+.line {
+    width: 100px;
+    height: 2px;
+    background-color: #ccc;
+    color: #ffffff;
+    margin: 0 ;
+}
+
+.line.completed {
+    background-color: #541f95;  /* Color for completed line */
+}
+
+/*page2*/
+.row {
+    display: flex;
+    margin-bottom: -2vh;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding-left: 20px;
+   
+}
+input[type=file] {
+    width: 50vh;
+    margin-top: 2vh;
+    margin-bottom: -8vh;
+    height: 20vh;
+}
+#p5_h2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #934cb4;
+    text-align: center;
+}
+#end{
+    font-weight:bold;
+    justify-content: left;
+}
+.formpage{
+    padding: 10vh;
+}

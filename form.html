@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel Form</title>
+    <link rel="stylesheet" href="css/form_style.css">
+</head>
+<body>
+    <header class="home">
+        
+        <h1 class="logo">FINANZ</h3>
+        <nav>
+            <ul>
+                <li><a href="">ABOUT US</a></li>
+                <li><a href="">OUR SERVICES</a></li>
+                <li><a href="">CARDS</a></li>
+                <li><a href="">HOW IT WORKS</a></li>
+                <li><a href="">AFFILIATES</a></li>
+                <li><a href="">CONTACT US</a></li>
+            </ul>
+            
+        </nav>
+        
+        <button id="log">LOG IN</button><br>
+        <button id="schedule">SCHEDULE A CALL</button>
+    </header>
+    <div id="container">
+        <h1 id="head1">Online Application Form</h2>
+
+        <div class="step-container">
+                <div class="step" id="step1">1</div>
+                <div class="line" id="line1"></div>
+                <div class="step" id="step2">2</div>
+                <div class="line" id="line2"></div>
+                <div class="step" id="step3">3</div>
+                <div class="line" id="line3"></div>
+                <div class="step" id="step4">4</div>
+                <div class="line" id="line4"></div>
+                <div class="step" id="step5">5</div>
+        </div>
+    <div id="c1">
+    <form action="/submit" method="POST" id="form" enctype="multipart/form-data">
+        <div class="formpage" id="page1" >
+        <label for="Company_Name">Full Registered Company Name</label>
+        <h6>enter full company name</h6>
+        <input type="text" name="Company_Name" required><br>
+
+        <label for="Company_Number">Company Number</label>
+        <h6>enter company number</h6>
+        <input type="text" name="Company_Number" required><br>
+
+        <label for="Company_Website">Company Website</label>
+        <h6>enter company website</h6>
+        <input type="text" name="Company_Website" required><br>
+
+        <label for="Country_Of_Registration">Country Of Registration</label>
+        <h6>select country</h6>
+        
+        <select id="country" name="Country_Of_Registration" required >
+            <option value="Please Select" selected>Please Select</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Belgium">Belgium</option>
+            <option value="canada">Canada</option>
+            <option value="Egypt">Egypt</option>
+            <option value="France">France</option>
+            <option value="India">India</option>
+            <option value="Japan">Japan</option>
+        </select><br><br>
+
+        <input type="checkbox" id="agree1" name="Company_directorsUBO_residence" value="agree1">
+        <label for="Company_directorsUBO_residence">Company directors/UBO are also residing in the country of registration </label><br><br>
+        <br>
+        
+        <button class="next1" type="button" onclick="nextPage(1)">Next</button>
+
+
+    </div>
+    <div class="formpage" id="page2" style="display:none;">
+
+   
+        <div  class="row">
+        <div class="column" >
+            <label for="Certificate_of_Registration">Certificate of Registration</label><br>
+            <input type="file" name="Certificate_of_Registration" required>
+            <br>
+            <label for="Commercial_Registry_document">Extract - Commercial Registry document</label><br>
+            <input type="file" name="Commercial_Registry_document" required>
+            <br>
+            <label for="company_Organizational_Chart">A company Organizational Chart</label><br>
+            <input type="file" name="company_Organizational_Chart" required>
+            <br>
+        </div>
+        <div class="column" >
+            <label for="Memorandum">Memorandum & Articles of Association</label><br>
+            <input type="file" name="Memorandum" required>
+            <br>
+
+            <label for="Certificate_of_Shareholders">Certificate of Shareholders and Register of Directors</label><br>
+            <input type="file" name="Certificate_of_Shareholders" required>
+            <br>
+            
+        </div>
+    </div>
+        <br>
+        
+        <button class="prev" type="button" onclick="prevPage(2)">Previous</button>
+        <button class="next1" type="button" onclick="nextPage(2)">Next</button>
+
+
+    </div>
+    <div class="formpage" id="page3" style="display:none;">
+
+   
+        <div  class="row">
+            <div class="column" >
+                <label for="Business_Plan">Business Plan</label><br>
+                <input type="file" name="Business_Plan" required>
+                <br>
+            </div>
+            <div class="column" >
+                <label for="Address_Proof">Business Proof of Address</label><br>
+                <input type="file" name="Address_Proof" required>
+                <br>
+            </div>
+        </div>
+
+        <label for="bank_statmnts">Business Bank Statements</label>
+        <h6>Please provide three months' worth of bank statements for your business OR the personal BS for the UBO in case your business does not have a bank account yet. It is important that the UBO/Company's name  is clearly mentioned at the top of first page, if not then also provide a bank confirmation letter . These need to show some transactional data.</h6>
+        <input type="file" name="bank_statmnts" required><br>
+        <label for="activity_proof">Business Proof of activity</label>
+        <h6>Please provide 1-2 copies of service agreements + 1-2 samplee invoices between the company and its main customers. If there are no clients yet, please provide a 'draft template' of a service agreement/isertion order that outlines the services that will be provided.</h6>
+        <input type="file" name="activity_proof" required><br>
+
+        <button class="prev" type="button" onclick="prevPage(3)">Previous</button>
+        <button class="next1" type="button" onclick="nextPage(3)">Next</button>
+
+
+    </div>
+    <div class="formpage" id="page4" style="display:none;">
+
+    
+        <label for="passport">Passport of Shareholder + Director</label>
+        <h6>Send a colour passport copy scan </h6>
+        <input type="file" name="passport" required><br>
+        <label for="address_shareholders">Proof of Address of Shareholder(s) and Director(s)</label>
+        <h6>Provide a recent home Utilty Bill OR a personal bank statement . Original + English translation</h6>
+        <input type="file" name="address_shareholders" required><br>
+        <label for="Signatory">Authorized Signatory</label>
+        <h6>Please confirm who will be the person in charge of maanging the bank account and will be performing an i-verification once the process starts . If different UBO or director please provide NAME+POSITION+PASSPORT COPY+E-MAIL</h6>
+        <input type="file" name="Signatory" required><br>
+        <label for="proof_activity">Business Proof of activity</label>
+        <h6>Please provide 1-2 copies of service agreements + 1-2 samplee invoices between the company and its main customers. If there are no clients yet, please provide a 'draft template' of a service agreement/isertion order that outlines the services that will be provided.</h6>
+        <input type="file" name="proof_activity" required><br>
+        <button class="prev" type="button" onclick="prevPage(4)">Previous</button>
+
+        <button class="next1" type="button" onclick="nextPage(4)">Next</button>
+
+
+    </div>
+    <div id="page5" class="formpage" style="display:none;">
+    
+        <h2 id="p5_h2">FORCASTED MONTHLY TRANSACTIONS</h2>
+
+        <label for="cur_type">Which currency does the company use for reporting purposes? This will also be the currency of forecasting volumes required below</label>
+        <h6>select currency</h6>
+        <select id="cur" name="cur_type" required >
+            <option value="Please Select" selected>Please Select</option>
+            <option value="dollar">U.S. dollar</option>
+            <option value="euro">Euro</option>
+            <option value="yen">Yen</option>
+            <option value="sterling">Sterling</option>
+            <option value="baht">Baht</option>
+            <option value="dirham">Dirham</option>
+            <option value="rupee">Rupee</option>
+        </select>
+
+        <label for="turnover">What is your expected annual turnover for your current financial period? In selected currency</label>
+        <h6>enter annual turnover</h6>
+        <input type="text" name="turnover" required><br>
+
+        <p id="end">
+            After recept of these documents , we will formulate and send you a 'fee schedule' containing rates for account. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nesciunt molestiae vero, assumenda id facere totam incidunt omnis rerum eligendi accusantium nobis dicta laborum saepe delectus cumque harum repellat! Nesciunt?
+        </p>
+        <button class="prev" type="button" onclick="prevPage(5)">Previous</button>
+
+        <button class="next1" type="submit" >Submit</button>
+        
+    </div>
+    </form>
+</div>
+</div>
+<script src="js/scripts.js"></script>
+
+</body>
+</html>
